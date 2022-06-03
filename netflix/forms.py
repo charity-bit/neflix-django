@@ -16,8 +16,5 @@ class NewUserForm(UserCreationForm):
 
 class GetStartedForm(forms.Form):
     email = forms.EmailField()
-    class Meta:
-        model = User
-        fields = ['email']
-
+  
         
