@@ -1,0 +1,123 @@
+
+{% extends 'netflix/base.html' %}
+{% load static %}
+
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'netflix/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- <h1 class="logo">NETFLIX</h1> -->
+<div class="cont">
+
+  <!-- VIDEO KEY -->
+  <p style="display:none"
+  id="video_key">{{key}}</p>
+
+  <header class="nav">
+    <a href="/home" class="nav__logo"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.72em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 138"><path fill="#DB202C" d="M340.657 0v100.203c12.36.575 24.687 1.27 36.98 2.09v21.245a1822.444 1822.444 0 0 0-58.542-2.959V0h21.562ZM512 .012l-28.077 65.094l28.07 72.438l-.031.013a1789.409 1789.409 0 0 0-24.576-3.323l-15.763-40.656l-15.913 36.882a1815.88 1815.88 0 0 0-22.662-2.36l27.371-63.43L435.352.013h23.325l14.035 36.184L488.318.012H512ZM245.093 119.526V.011h60.19v21.436h-38.628v27.78h29.227v21.245h-29.227v49.05l-21.562.004ZM164.58 21.448V.01h66.69v21.437h-22.565v98.66c-7.197.19-14.386.412-21.56.683V21.448H164.58ZM90.868 126.966V.014h59.89v21.435h-38.331v29.036c8.806-.113 21.327-.24 29.117-.222V71.51c-9.751-.12-20.758.134-29.117.217v32.164a1848.195 1848.195 0 0 1 38.331-2.62v21.247a1815.638 1815.638 0 0 0-59.89 4.45ZM48.571 77.854L48.57.01h21.562v128.96c-7.882.81-15.75 1.673-23.603 2.584L21.56 59.824v74.802a1834.87 1834.87 0 0 0-21.561 2.936V.012H20.49l28.08 77.842Zm346.854 46.965V.012h21.563V126.6c-7.179-.64-14.364-1.23-21.563-1.78Z"/></svg></a>
+    <a class="nav__profile" href="{% url 'profile' user.id %}">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRHntuF-zES9zbElrXP3Fd52RGadUs-ZP_pg&usqp=CAU" alt="">
+    </a>
+  </header>
+
+       <section class="banner"
+        style="
+        background-size: cover;
+        background-image: url('https://image.tmdb.org/t/p/original{{movie.poster_path}}');
+        background-position: center center;">
+         <div class="banner__contents">
+            <h1 class="banner__title">
+                {% if movie.title %}
+                {{movie.title}}
+                {% else %}
+                     {{movie.name}}
+                {% endif %}
+                    
+            </h1>
+            <div class="banner__buttons">
+              <button class="banner__button">Play</button>
+              <button class="banner__button"> <a href="{% url 'details' movie.id %}">More Info</a></button>
+            </div>
+            <p class="banner__description">
+             {{movie.overview}}
+            </p>
+          </div>
+          <div class="banner--fadeBottom" />
+
+          <!-- player div -->
+          <div class="player">
+               
+            <div id="player">
+            </div>
+
+            <button class="stop"><a href="#">
+              <svg aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293Z" clip-rule="evenodd"/></svg></a>
+            </button>
+  
+          </div>
+         
+       </section>
+       <!-- popular -->
+
+       <main>
+        <div class="row">
+          <h2>Popular</h2>
+          <div class="row__posters">
+            {% for movie in popular %}
+             <div>
+              {% if image.poster_path %}
+                <img class="row__poster"
+                src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="">
+              {% else %}
+                <img class="row__poster"
+                src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="{{movie.name}}">
+              {% endif %}
+              </div>
+          {% endfor %}
+  
+            </div> 
+        </div>
+  
+        <!-- netflix originals -->
+  
+        <div class="row">
+          <h2>Netflix originals</h2>
+          <div class="row__posters">
+            {% for movie in now_playing %}
+             <div>
+              {% if image.poster_path %}
+                <img class="row__poster"
+                src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="">
+              {% else %}
+                <img class="row__poster"
+                src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="{{movie.name}}">
+              {% endif %}
+              </div>
+          {% endfor %}
+  
+            </div> 
+        </div>
+       </main>
+    
+     
+      
+      
+
+  
+   
+</div>
+
+
+
+  {% block scripts %}
+    <script src="{% static 'netflix/js/trailer.js' %}"></script>
+
+  {% endblock %}
+
+{% endblock %}
+

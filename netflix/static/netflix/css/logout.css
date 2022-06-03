@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --clr-red:#e50814;
+    --clr-black: #0b0404;
+}
+
+body{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/log.jpg');
+    min-height: 100%; 
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 4%;
+    margin-bottom: 5%;
+}
+.nav__logo{
+    color: var(--clr-red);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+
+.logo a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    padding: 1% 2%;
+    border-radius: 4px;
+
+}
+
+.logo a:nth-child(2){
+    background-color: var(--clr-red);
+}
+.cont{
+    width: 27%;
+    margin:0 auto;
+    background-color: white;
+    padding: 2%;
+}
+.cont button {
+    width: 100%;
+    margin:5% auto;
+    padding: 4% 0;
+    background-color: #007ffd;
+    border: none;
+    border: 2px;
+
+}
+.cont .ttl{
+    font-size: 3vw;
+    font-weight: 300;
+    color: #333333;
+    margin: 1% 0;
+}
+
+.cont p{
+    font-size: 1.1vw;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.8)
+}
+.cont button a {
+   
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+    
+}

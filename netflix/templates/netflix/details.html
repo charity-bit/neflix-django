@@ -1,0 +1,21 @@
+{% extends 'netflix/base.html' %}
+{% load static %}
+
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'netflix/css/details.css' %}">
+{% endblock %}
+
+  {% block content %}
+
+     <h1>details page </h1>
+
+  {% block scripts %}
+    <script src="{% static 'netflix/js/details.js' %}"></script>
+
+  {% endblock %}
+
+{% endblock %}
+

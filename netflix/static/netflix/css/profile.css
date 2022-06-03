@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --clr-red:#e50814;
+    --clr-black: #0b0404;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 4%;
+    margin-bottom: 5%;
+}
+.nav__logo{
+    color: var(--clr-red);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:1% 4%;
+    background-color: #0b0404; 
+}
+.nav__profile img{
+    height: 40px;
+    width: 40px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+.container{
+    width: 80%;
+    margin:0 auto;
+
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 2% 0;
+
+}
+.account h1{
+    font-weight: 300;
+}
+.account a {
+    display: flex;
+    align-items: center;
+    gap:2px;
+    text-decoration: none;
+    color:#555555;
+    font-weight: 600;
+    font-size: 12px;
+}
+.account svg{
+    color:var(--clr-red);
+    margin-right: 4px;
+    font-size: 16px
+}
+
+.billing{
+    display: flex;
+    gap:10px;
+    padding-top: 3%;
+    padding-bottom:1% ;
+}
+.membership{
+    width: 30%;
+}
+.membership h2{
+    font-weight: 400;
+    font-size: 20px;
+    color:#78787c ;
+}
+.membership button{
+    background-color: #e3e3e3;
+    border: none;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    padding:4% 5%;
+    width: 70%;
+    margin-top: 5%;
+}
+.membership button a {  
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    opacity: .9;
+}
+.left p:nth-child(1),.tier p:nth-child(1){
+    font-weight: 600;
+    
+}
+.left p:nth-child(2){
+    color:#78787c;
+    font-weight: 600;
+    margin-top: 1%;
+}
+
+.left{
+    display: flex;
+         flex-direction: column;
+         justify-content: center
+}
+
+.right{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+}
+.right p a {
+    color:#4775e6;
+    text-decoration: none;
+    font-weight: 500;
+}
+.right a:hover{
+    text-decoration: underline;
+}
+.details__container{
+    width:70%;
+}
+.details{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0;
+}
+
+hr{
+    background-color: #555555;
+   
+}
+.details-separator{
+   background-color: #78787c !important;
+   opacity: .7;
+}
+
+.profile-separator{
+    background-color: #78787c !important;
+    opacity: .7;
+    width: 100%;
+ }
+
+.payment p {
+    font-weight: 600;
+    margin: 2% 0;
+}
+
+.plan{
+    display: flex;
+    align-items: center;
+    padding:2% 0;
+
+}
+.plan__details,.profile__details{
+    width:30%;
+    font-weight: 400;
+    font-size: 20px;
+    color:#78787c ;
+
+}
+.tier{
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tier button a{
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tier button{
+    background-color: var(--clr-red);
+    padding: 2%  4%;
+    border: none;
+    
+}
+
+.profiles{
+   display: flex;
+   padding: 2% 0;
+   align-items: center;
+}
+.profile__cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:70%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    padding: 2% 0;
+}
+
+.profile__cont .profile-separator:last-child
+{
+    opacity:0
+}
+.profile img{
+    height: 60px;
+    width: 60px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.name p{
+    font-weight: 600;
+}
+.name p:nth-child(2){
+    color:#78787c;
+    font-weight: 300;
+    margin-top: 1%;
+}
+
+main{
+    margin: 4%;
+}

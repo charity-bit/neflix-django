@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --clr-red:#e50814;
+    --clr-black: #0b0404;
+}
+body{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/bg.jpg');
+    min-height: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+    margin-bottom: 5%;
+}
+.nav__logo{
+    color: var(--clr-red);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.logo a:nth-child(2) {
+    text-decoration: none;
+    background-color: var(--clr-red);
+    color: white;
+    font-weight: 600;
+    padding: 1% 2%;
+    border-radius: 4px;
+}
+
+.sign{ 
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    
+}
+
+.cont{
+    background-color: var(--clr-black);
+    width: 30%;
+    margin:0 auto;
+    padding: 2% 4%;
+    opacity: .9;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin:0 auto;
+    opacity: .9;
+}
+
+form input[type='text'],form input[type="password"],form input[type="email"]{
+    background-color: #333333;
+    height: 45px;
+    outline: #333333;
+    border: none;
+    padding: 0 2%;
+    border-radius: 4px;
+    color:white;
+    position: relative;
+
+
+}
+
+form label{
+    margin: 5px 0;
+    
+} 
+form input[type="submit"]{
+    background-color: var(--clr-red);
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+ 
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+form input[type ='checkbox']{
+    color: #737373;
+    background-color: #737373;
+}
+.lb{
+    display: inline !important;
+    
+}
+.rm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#737373;
+    margin-top: 5%;
+}
+
+.new-user p{
+   color: #737373;
+   margin-top: 10%;
+}
+.new-user p a{
+    margin-left: 3px;
+    color: #fff;
+    text-decoration: none;
+}
+.new-user p a:hover {
+    text-decoration: underline;
+
+}
+.errorlist{
+    color:red;
+}
+.helptext{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+
+    .cont{
+        width:95%;
+        margin:2% auto;
+    }
+
+    form {
+        width:90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:800px) and (min-width:501px){
+    .cont{
+          width: 50%;
+          margin:0 auto;
+    }
+}
+
+    
+
+

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --clr-red:#e50814;
+    --clr-black: #0b0404;
+}
+
+body{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bg.jpg');
+    min-height: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+    margin-bottom: 5%;
+}
+.nav__logo{
+    color: var(--clr-red);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+
+.logo a:nth-child(2) {
+    text-decoration: none;
+    background-color: var(--clr-red);
+    color: white;
+    font-weight: 600;
+    padding: 1% 2%;
+    border-radius: 4px;
+
+} 
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-text h1{
+    font-size: 4.3vw;
+    word-spacing: 3.2px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.hero-text p{
+  font-weight: 200;
+  font-size: 2vw;
+  margin-top: 1.5%;
+  text-align: center;
+  word-spacing: 3px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+}
+form input[type='email']{
+    width: 80%;
+      
+}
+form input[type='submit']{
+    background-color: var(--clr-red);
+    color:#fff;
+    width: 30%; 
+}
+form label{
+    display: none;
+}
+form input{
+  padding: 3.5% 1%;
+  border: none;
+}
+
+.txt{
+    text-align: center;
+    font-size: 1vw;
+    margin: 2% 0;
+    text-align: center;
+}
